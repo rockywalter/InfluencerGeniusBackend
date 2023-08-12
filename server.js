@@ -26,17 +26,19 @@ app.use('/users', usersRouter);
 const campaignRouter = require('./routes/campaigns');
 
 app.use('/campaign', campaignRouter);
-// const hotelsRouter = require('./routes/hotels');
 
-// app.use('/hotels', hotelsRouter);
+const influencerRouter = require('./routes/influencer');
 
-// const pacakgeRouter = require('./routes/packages');
+app.use('/influencerinfo', influencerRouter);
 
-// app.use('/packages', pacakgeRouter);
+const commentRouter = require('./routes/comments');
 
-// const flightBookingsRouter = require('./routes/flightBookings');
+app.use('/comments', commentRouter);
 
-// app.use('/flightbookings', flightBookingsRouter);
+const descriptiontRouter = require('./routes/descriptions');
+
+app.use('/descriptions', descriptiontRouter);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
