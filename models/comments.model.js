@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const commentSchema = new Schema({
     influencer_id: { type: Number, required: true },
     comment: { type: String, required: true },
-    sentiment: { type: Number, required: true },
+    sentiment: { type: String, required: true }, 
 },{
     versionKey: false,
     collection: 'comments',
