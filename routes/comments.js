@@ -9,5 +9,14 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/allcount').get((req, res) => {
+    Comments.countDocuments()
+    .then(count => {
+        res.json({ count: count });
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
 
 module.exports = router;
